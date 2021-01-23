@@ -1,0 +1,206 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.about{
+    width:100vw;
+    height:calc(100vh - 60px);/* moins la taille du header*/
+    color: #333;
+}
+
+.textContainer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding:10px;
+}
+
+.title{
+    margin:10px 0;
+    color:var(--principal-color);
+    border: solid 1px var(--principal-color);
+    padding: 10px;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.title:hover{
+    background-color: var(--principal-color);
+    color: var(--white);
+}
+
+.description{
+    text-align: center;
+    font-family: 'Pacifico';
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.span{
+    font-size: 1.4em;
+    color: var(--principal-color);
+    margin: 15px;
+    text-decoration: underline;
+
+}
+
+.infos{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 10px;
+}
+
+
+.infosTitle{
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 25px;
+    position: relative;
+}
+
+.infosTitle:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-25px;
+    width: 20px;
+    height: 25px;
+}
+
+#adress::before{
+    background: url("../../IMAGES/Icones/location.svg")center center /contain no-repeat ;
+
+}
+
+#phone::before{
+    background: url("../../IMAGES/Icones/mail.svg")center center /contain no-repeat ;
+
+}
+
+#mail::before{
+    background: url("../../IMAGES/Icones/phone.svg")center center /contain no-repeat ;
+
+}
+
+p a{
+    color:var(--gray);
+    text-decoration: underline;
+    color: var(--principal-color-hover);
+    font-size: 20px;
+}
+
+p a:hover{
+    text-decoration: none;
+}
+
+.image{
+    box-shadow: 1px 8px 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: url("../../IMAGES/Others/ESATIC.jpg") center center / cover no-repeat ;
+}
+
+.contacts{
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.textareaBox,.inputBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 50px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.textareaBox{
+    height:300px;
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    outline: none;
+    text-align:center;
+    font-size: 18px;
+    text-indent: 10px;
+    resize: none;
+    border-color: var(--gray);
+    color:var(--principal-color);
+}
+
+
+
+.inputBox{
+    position: relative;
+}
+
+.inputItem{
+    width: 100%;
+    height: 100%;
+    text-indent: 10px;
+    border-radius: 0;
+    border: none;
+    color: var(--principal-color);
+    border-bottom: solid 1px var(--gray);
+    outline: none;
+}
+
+.inputItem:focus + .topItem, .inputItem:valid + .topItem{
+    top: -10px;
+    color: var(--principal-color);
+}
+
+.topItem{
+    position: absolute;
+    top: 10px;
+    left:20px;
+    transition: all .2s;
+}
+
+.inputItem:focus, textarea:focus{
+    border-color: var(--principal-color);
+    box-shadow: 2px 1px 1px rgba(103, 184, 185,.5);
+}
+
+.submit{
+    height: 50px;
+    border: none;
+    background-color: var(--principal-color);
+    border-radius: 0;
+    font-family: Open-Sans-C;
+    font-size: 20px;
+    margin: 10px 0;
+    transition: all .2s;
+    color:var(--white)
+}
+
+.submit:hover{
+    background-color: var(--cyan);
+}
+
+@media only screen and (min-width:900px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .form{
+        width: 50%;
+    }
+    
+}

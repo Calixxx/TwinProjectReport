@@ -1,0 +1,69 @@
+:root{
+    --principal-color:#67b8b9;
+    --principal-color-hover:#aadddd;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --cyann: #2f5a61;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40
+}
+
+@font-face{
+    font-family: 'Sen';
+    src: url(./FONTS/Sen/Sen-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+
+
+@font-face{
+    font-family: 'Sen';
+    src: url(./FONTS/Sen/Sen-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: 'Pacifico';
+    src: url(./FONTS/Pacifico/Pacifico-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'Open-Sans';
+    src: url('./FONTS/Open-Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Open-Sans-C';
+    src: url('./FONTS/Open_Sans_Condensed/OpenSansCondensed-Light.ttf') format('truetype');
+}
+
+
+body, html{
+    font-family: 'Open-Sans-C';
+    color:var(--gray);
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}

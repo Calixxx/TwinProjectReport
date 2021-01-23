@@ -1,0 +1,130 @@
+.home{
+    height: calc(100vh - 60px);
+    width: 100vw;
+}
+
+.homeTitleBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+.homeTitle{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--principal-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.homeTitle::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:30%;
+    height: 2px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: var(--principal-color);
+}
+
+.homeTitle:hover::after{
+    width: 100%;
+}
+
+.details{
+    margin: 20px;
+    font-size: 25px;
+    font-family: Pacifico;
+    color: var(--dark);
+    text-align: center;
+    animation-name: slide;
+    animation-duration: 2s;
+    line-height: 1.3;
+}
+
+.details span{
+    font-size: 35px;
+    color: var(--principal-color);
+}
+
+.imgLogoBox{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:300px;
+    animation-name:rotate;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+
+.imgLogo{
+    width: 100%;
+}
+
+.btnReport{
+    width:200px;
+    height: 30px;
+    margin: 0 auto;
+    animation-name: boom;
+    animation-duration: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnReport .lk{
+    width:100%;
+    height: 100%;
+    background-color: var(--principal-color);
+    padding: 15px;
+    color:var(--white);
+    font-family: 'Open-Sans-C';
+    transition: all .4s linear;
+}
+
+.btnReport .lk:hover{
+    background-color: var(--cyan);
+}
+
+@media only screen and (min-width:900px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        /* overflow: hidden; */
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform : rotate(0turn) scale(.2);
+    }
+    to{
+        transform : rotate(1turn) scale(1); 
+    }
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes boom{
+    from{
+        transform:scale(4);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+

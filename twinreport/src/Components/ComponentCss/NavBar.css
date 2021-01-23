@@ -1,0 +1,133 @@
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background-color: var(--principal-color);
+    padding: 0 20px;
+    width: 100vw;
+}
+
+.logoBox{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+}
+
+.logo-name{
+    color:var(--white);
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link{
+    margin: 0 15px;
+    padding: 15px;
+    color:var(--white);
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 20px;
+    transition:all .15s linear;
+}
+
+.link:hover{
+    background-color:var(--principal-color-hover);
+}
+
+.menuBtnBox {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .5s ease-in-out;
+  }
+  .menuBtn {
+    width: 50px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menuBtn::before,
+  .menuBtn::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menuBtn::before {
+    transform: translateY(-16px);
+  }
+  .menuBtn::after {
+    transform: translateY(16px);
+  }
+  /* ANIMATION */
+  .menuBtnBox.open .menuBtn {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menuBtnBox.open .menuBtn::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menuBtnBox.open .menuBtn::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+.toggle{
+
+    transform: translateX(100%);
+}
+
+@media only screen and (max-Width: 630px){
+
+    .navBar{
+        width: 100vw;
+        /* height: 100%; */
+        padding: 0;
+    }
+
+    .nav{
+        position: absolute;
+        top:60px;
+        left: -100%;
+        right: 0;
+        height:calc(100% - 60px);
+        background-color: var(--principal-color);
+        width: 100%;
+        transition: all .4s linear;
+    }
+
+    .links{
+        text-align: center;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .link{
+        margin:40px auto;
+        width: 100vw;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .menuBtnBox{
+        display: flex;
+    }
+    
+}
